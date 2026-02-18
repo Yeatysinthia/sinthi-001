@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        //array_push
+        //add from last
+        var st_70 = ["Sumi", "Meem", "Liyes", "Bappi", "Rakib"]
+        console.log(st_70);
+        st_70.push("Fahim"); //add new element
+        console.log(st_70);
+
+        //add from first
+        //  use unshift
+
+        var student = ["sumi", "Meem", "sinthia",]
+        console.log(student);
+        student.unshift("yeaty");
+        console.log(student);
+
+
+        //remove from last
+        // use pop
+        var st_70 = ["Sumi", "Meem", "Liyes", "Bappi", "Rakib"]
+        console.log(student);
+        student.pop("yeaty");
+        console.log(student);
+
+
+        //remove from first
+        // use shift
+        var st_70 = ["Sumi", "Meem", "Liyes", "Bappi", "Rakib"]
+        console.log(student);
+        student.shift("yeaty");
+        console.log(student);
+
+        //slice 
+        const numbers = [ "A","B","C","D","E","F","G","H"]
+        console.log(numbers);
+        console.log(numbers.slice(3))
+        console.log(numbers.slice(3,6))
+        console.log(numbers.slice(1,5))
+
+        //array splice 
+
+        var a = ["A","B","C","D","D"];
+        console.log(a);
+        a.splice(3,2,"F", "G");
+        console.log(a)
+
+        //join array
+        var a = ["A","B","C","D","F"];
+        console.log(a);
+        let b = a.join("&");
+        console.log(b);
+        document.write(b);
+
+        //concat array
+        var a = ["A","B","C","D","F"];
+        var m = ["M","L","N","O"]
+        var c = ["P","Q","R","S","T"];
+        let d = c.concat(m,a);
+        console.log(d)
+
+        //sort array
+        let letter = ["B", "J", "K", "H", "F"]
+        console.log(letter);
+        letter.sort();
+        console.log(letter);
+
+        //reverse array
+        let num = [6,5,9,8,7,4,3,2]
+        console.log(num);
+        num.sort();
+        console.log(num);
+
+        num.reverse();
+        console.log(num);
+
+        //number value
+        let num2 = [ 43, 78, 676, 76, 674]
+        num2.sort(function(a, d) {
+            return a-d   //assending
+        })
+
+        console.log(num2);
+
+        let num3 = [ 43, 78, 676, 76, 674]
+        num3.sort(function(a, b) {
+            return b-a   //dessending
+        })
+
+        console.log(num3);
+
+
+
+
+
+
+        
+
+
+         </script>
+</body>
+</html>

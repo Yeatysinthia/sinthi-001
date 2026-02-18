@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="infoDetails()">submit</button> 
+    <br>
+    <script> 
+        // object literal
+        let car = { 
+            model: 1500,
+            colour: "Blue",
+            name: "Toyota",
+        }
+        console.log(typeof car)
+        console.log(car)
+        document.write(car.colour) 
+        document.write("<br>")
+
+        //array
+
+        let students = ["a" , "b" , "c" ,"d"];
+        console.log(students[2]);
+        document.write(students[2]);
+        document.write("<br>")
+
+        //function
+
+        function infoDetails(){
+            document.write("Hello World")
+        }
+        document.write("<br>")
+
+        //assignment operator
+        //Add
+
+        let x = 5;
+        let y = 2;
+        let z = x + y;
+        document.write(z)
+        document.write("<br>")
+
+        //sub
+        let a = 5;
+        let b = 2;
+        let c = x - y;
+        document.write(c)
+        document.write("<br>")
+
+        //multiplication
+        let x1 = 5;
+        let y1 = 2;
+        let z1 = x1 * y1;
+        document.write(z1)
+        document.write("<br>")
+
+    </script>
+</body>
+</html>
