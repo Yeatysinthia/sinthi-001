@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let text = prompt("Enter a string:");
+
+      
+      text = text.toLowerCase();
+
+      let vowels = "aeiou";
+      let vowelCount = 0;
+      let consonantCount = 0;
+      let occurrence = {};
+
+      for (let i = 0; i < text.length; i++) {
+        let char = text[i];
+
+        
+        if (char >= "a" && char <= "z") {
+          
+          if (occurrence[char]) {
+            occurrence[char]++;
+          } else {
+            occurrence[char] = 1;
+          }
+
+          
+          if (vowels.includes(char)) {
+            vowelCount++;
+          } else {
+            consonantCount++;
+          }
+        }
+      }
+
+      
+      document.writeln("Total Vowels: " + vowelCount + "<br>");
+      document.writeln("Total Consonants: " + consonantCount + "<br><br>");
+
+      document.writeln("Character Occurrence:<br>");
+
+      for (let key in occurrence) {
+        document.writeln(key + " = " + occurrence[key] + "<br>");
+      }
+    </script>
+  </body>
+</html>

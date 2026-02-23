@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desending</title>
+</head>
+<body>
+    <script>
+        let a =prompt("Enter first number:");
+        let b =prompt("Enter second number:");
+        let c =prompt("Enter third number:");
+
+        if(a>=b && a>=c){
+            if(b>=c){
+                document.writeln(a,b,c);
+            }else{
+                document.writeln(a,c,b);
+            }
+           
+        }
+        else if (b>=a && b>=c){
+           if(a>=c){
+            document.writeln(b, a, c);
+           }else{
+            document.writeln(b, c, a);
+           }
+        }
+        else if (c>=a && c>=b){
+           if(a>=b){
+            document.writeln(c, a, b);
+
+           }else{
+            document.writeln(c, b, a)
+           }
+        }
+       
+    </script>
+</body>
+</html>

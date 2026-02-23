@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers =[10,5,25,43,12];
+
+        let smalest = numbers[0];
+        let sum=0;
+        for(let i=0; i<=numbers.length; i++){
+            sum=sum+numbers[i];
+            if(numbers[i]< smalest){
+                smalest=numbers[i];
+            }
+        }
+        document.writeln(smalest );
+        
+    </script>
+    <script>
+        let number =[10,5,25,43,12];
+
+        let Largest = number[0];
+        let sumation=0;
+        for(let i=0; i<=numbers.length; i++){
+            sum=sum+numbers[i];
+            if(number[i]> Largest){
+                Largest=number[i];
+            }
+        }
+        document.writeln(Largest);
+    </script>
+</body>
+</html>
