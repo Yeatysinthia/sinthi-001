@@ -7,7 +7,7 @@
 </head>
 <body>
     <!-- //addition() -->
-     <script>
+     <!-- <script>
         // function addition() { //static
         //     a = 2;
         //     b = 5;
@@ -37,7 +37,7 @@
         
 
 
-    //  </script>
+    //  </script> -->
 
      <!-- //return -->
       <!-- <script>
@@ -51,14 +51,14 @@
       </script> -->
 
       <!-- //array function -->
-       <script>
+       <!-- <script>
         function addn(a, b) {
             return a + b;
         }
         console.log(addn(3, 2));
        </script>
-       <!-- //single line of code -->
-        <script>
+       <!- //single line of code -->
+        <!-- <script>
             add = (a, b) => a + b;
             console.log(add(3, 2));
 
@@ -71,8 +71,34 @@
 
             }
             console.log(great(3, 5));
-        </script>
-       <!-- //annonymous function -->
+        </script> -->
+       <!-- //annonymous function  -->
+<!-- 
+       //auto invoke function/immidiate invoke function -->
+        <!-- <script>
+             (
+                function(age){
+                    console.log("" + age)
+
+                }
+             )(20);
+        </script> -->
+
+        <!-- constractor function -->
+         <script>
+            function car(name, model) {
+                this.name = name;
+                this.model = model;
+                
+            }
+
+            let newcar = new car("BMW", "i8");
+            document.write(newcar.model + " " + newcar.name);
+                
+           
+            
+         </script>
+
 
 </body>
 </html>
