@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    let numbers = [8, 9, 65, 45, 987, 98, 867];
+    let small = numbers[0];
+    let large = numbers[0];
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > large) {
+            large = numbers[i];
+        }
+        if (numbers[i] < small) {
+            small = numbers[i];
+        }
+        sum = sum + numbers[i];
+    }
+
+    document.write("Largest Number is: " + large + "<br>");
+    document.write("Smallest Number is: " + small + "<br>");
+    document.write("Total Sum is: " + sum);
+</script>
+  </script>
+</body>
+</html>

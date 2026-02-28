@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const car = {
+            name: "BMW",
+            model: "500",
+            weight: "450kg",
+            color: "black",
+            start: function () {
+                return "My" + this.name + "is" + " " + "starting";
+            },
+            stop: function () {
+                return "My" + this.name + "is" + " " + "stop now";
+            },
+            drive: function () {
+                return "My" + this.name + "is" + " " + "driving";
+            },
+            break: function () {
+                return "My" + this.name + "is" + " " + "rest";
+            },
+
+
+        };
+        document.write(car.start() + "<br>");
+        document.write(car.stop() + "<br>");
+        document.write(car.break());
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<script>
+    let numbers = [4, 5, 8, 68, 79, 1];
+    let small = numbers[0];
+    let large = numbers[0];
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > large) {
+            large = numbers[i];
+        }
+        if (numbers[i] < small) {
+            small = numbers[i];
+        }
+        sum = sum + numbers[i];
+    }
+
+    document.write("Largest Number is: " + large + "<br>");
+    document.write("Smallest Number is: " + small + "<br>");
+    document.write("Total Sum is: " + sum);
+</script>
