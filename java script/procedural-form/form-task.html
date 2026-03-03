@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="#" name="f">
+        ID: <br>
+        <input type="text" name="id"> <br><br>
+
+        First Name: <br>
+        <input type="text" name="fname"> <br><br>
+
+        Last Name: <br>
+        <input type="text" name="lname"> <br><br>
+
+        Email: <br>
+        <input type="email" name="email"> <br><br>
+
+        Address: <br>
+        <textarea name="add" cols="30"></textarea> <br><br>
+
+        <input type="submit" value="Submit" onclick="info()">
+        <input type="reset">
+    </form>
+
+    <script>
+    function info() {
+        var id = document.f.id.value;
+        var fname = document.f.fname.value;
+        var lname = document.f.lname.value;
+        var fullname = fname + " " + lname;
+        var email = document.f.email.value;
+        var address = document.f.add.value;
+
+        var store = window.open("", "", "width=400px,height=400px");
+
+        store.document.write("ID: " + id + "<br>");
+        store.document.write("First Name: " + fname + "<br>");
+        store.document.write("Last Name: " + lname + "<br>");
+        store.document.write("Full Name: " + fullname + "<br>");
+        store.document.write("Email: " + email + "<br>");
+        store.document.write("Address: " + address);
+    }
+    </script>
+</body>
+</html>
