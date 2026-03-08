@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="#" method="post" name="f" style="width:250px; margin:0px auto; border:1px solid gray; padding:10px">
+
+NAME: <br>
+<input type="text" name="n"> <br>
+
+EMAIL: <br>
+<input type="email" name="e"> <br>
+
+ADDRESS: <br>
+<textarea name="add" cols="30"></textarea> <br>
+
+COURSE: <br>
+<select name="c">
+<option>CSE</option>
+<option>EEE</option>
+<option>BBA</option>
+</select> <br>
+
+GENDER: <br>
+<input type="radio" name="g" value="Male">Male
+<input type="radio" name="g" value="Female">Female
+<br>
+
+SUBJECT: <br>
+<input type="checkbox" name="s" value="Math">Math
+<input type="checkbox" name="s" value="Programming">Programming
+<input type="checkbox" name="s" value="Database">Database
+<br><br>
+
+<input type="button" value="Submit" onclick="info()">
+<input type="reset">
+
+</form>
+
+<script>
+function info(){
+    var nam = document.f.n.value;
+    var email = document.f.e.value;
+    var address = document.f.add.value;
+    var course = document.f.c.value;
+    var subject = document.f.s.value
+    var gender = document.f.g.value;
+
+    // Gender
+    var genderElems = document.getElementsByName("g");
+    var gender = "";
+    for(var i=0;i<genderElems.length;i++){
+        if(genderElems[i].checked){
+            gender = genderElems[i].value;
+            break;
+        }
+    }
+
+    // Subject
+    var subElems = document.getElementsByName("s");
+    var subject = [];
+    for(var i=0;i<subElems.length;i++){
+        if(subElems[i].checked){
+            subject.push(subElems[i].value);
+        }
+    }
+
+    Validation
+    if(nam=="" || email==""){
+        alert("Please enter Name and Email");
+        return;
+    }
+    if(subject.length==0){
+        alert("Select at least one subject");
+        return;
+    }
+
+    // Open new window
+    var store = window.open("","","width=450,height=500");
+    store.document.write("<h3>Student Information</h3>");
+    store.document.write("Name: "+nam+"<br>");
+    store.document.write("Email: "+email+"<br>");
+    store.document.write("Address: "+address+"<br>");
+    store.document.write("Course: "+course+"<br>");
+    store.document.write("Gender: "+gender+"<br>");
+    store.document.write("Subject: "+subject.join(", ")+"<br><br>");
+
+    store.document.write("<button onclick='window.print()'>Print</button> ");
+    store.document.write("<button onclick='window.close()'>Close</button>");
+}
+</script>
+
+</body>
+</html>

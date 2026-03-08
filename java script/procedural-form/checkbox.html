@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Student Admission</title>
+
+</head>
+ 
+<body>
+<form action="#" method="post" name="f" style="width:250px; margin:0px auto; border:1px solid gray; padding:10px">
+  
+  <div>Name<br/>
+  <input type="text" name="txtName" />
+  </div>
+  
+  <div>Address<br/>
+  <textarea  name="txtAddress" ></textarea>
+  </div>
+  
+  <div>Subject<br/>
+   English<input type="checkbox" value="English" name="chkSubject" />
+   Bengali<input type="checkbox" value="Bengali" name="chkSubject" />
+    Math<input type="checkbox" value="Math" name="chkSubject" />
+  </div>
+  
+  <div>
+  <input type="button" onclick="dyn_window()" value="Submit" />
+  </div>
+</form>
+
+<script language="javascript">
+ 
+function dyn_window(){  
+  
+  
+  var name=document.f.txtName.value;
+  var address=document.f.txtAddress.value;
+  
+  var subject="";
+  
+
+  
+  for(j=0;j<document.f.chkSubject.length;j++){
+  
+    if (document.f.chkSubject[j].checked) {
+      subject+=document.f.chkSubject[j].value+", ";
+      }
+  }
+  
+ 
+   // create new window here
+  
+    a=open('','','width=200px,height=200px')
+  
+  with(a.document){
+    
+    write("<div style='border:1px solid gray'>Name:"+name+"<br/>");
+    write("Address:"+address+"<br/>");
+    write("Subject:"+subject+"<br/></div>");
+  }
+   
+}
+ 
+ 
+</script>
+</body>
+</html>
+</body>
+</html>
