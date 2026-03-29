@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form</title>
+</head>
+
+<body>
+
+<form action="#" method="post" name="f">
+
+Name: <br>
+<input type="text" name="n"> <br>
+
+Email: <br>
+<input type="email" name="e"> <br>
+
+Course: <br>
+<input type="checkbox" name="s" value="HTML">HTML
+<input type="checkbox" name="s" value="Javascript">Javascript
+<input type="checkbox" name="s" value="PHP">PHP
+<br><br>
+
+Gender: <br>
+<input type="radio" name="g" value="Male">Male
+<input type="radio" name="g" value="Female">Female
+<br>
+
+Department: <br>
+<select name="c">
+<option>CSE</option>
+<option>EEE</option>
+<option>BBA</option>
+</select> <br><br>
+
+<input type="button" value="Submit" onclick="info()">
+<input type="reset">
+
+</form>
+
+<script>
+
+function info(){
+
+var nam = document.f.n.value;
+var email = document.f.e.value;
+var department = document.f.c.value;
+
+
+var genderElems = document.getElementsByName("g");
+var gender = "";
+
+for(var i=0;i<genderElems.length;i++){
+if(genderElems[i].checked){
+gender = genderElems[i].value;
+break;
+}
+}
+
+
+var subElems = document.getElementsByName("s");
+var course = [];
+
+for(var i=0;i<subElems.length;i++){
+if(subElems[i].checked){
+course.push(subElems[i].value);
+}
+}
+
+var store = window.open("","","width=450,height=500");
+store.document.write("Name: "+nam+"<br>");
+store.document.write("Email: "+email+"<br>");
+store.document.write("Course: "+course.join(", ")+"<br>");
+store.document.write("Gender: "+gender+"<br>");
+store.document.write("Department: "+department+"<br>");
+
+}
+
+</script>
+
+</body>
+</html>
